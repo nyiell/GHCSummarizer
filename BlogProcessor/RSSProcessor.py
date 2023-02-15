@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(messa
 
 class RSSProcessor(object):
 
-	"""Parser to take in Substack Feed and output tuples of link,title, body"""
+	"""Parser to take in Substack Feed and write it to DB"""
 
 	def __init__(self, url_name):
 		self.url_name = url_name
