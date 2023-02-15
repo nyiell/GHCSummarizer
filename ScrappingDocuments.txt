@@ -1,0 +1,25 @@
+Feature Document 
+
+
+[FUTURE]Looking at RSS Aggregators
+- Self hosting
+- Paid
+
+Taking format of individual types of blogs to parse- 
+Substack:
+	HTML Feed:
+		Title:
+			div class="post-header"
+				- title, link
+		Body:
+			div class="available-content"
+	RSS Feed:
+		Inside <item>
+			Title:
+				<Title>
+			Body:
+				<content:encoded>
+
+
+Given all the feeds are substack in the scrapping list. Extracting these components and inserting it into the DB.
+For any more type of RSS Feeds, we will manually take the scrapping format and parse it. 
