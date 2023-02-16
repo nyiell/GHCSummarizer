@@ -35,14 +35,14 @@ class RSSProcessor(object):
 					summary = re.sub('[^a-zA-Z0-9 \n\\.]', '', value)
 					summary = "summary"
 					# summary = summarize("summary")
-					cursor.execute(""" INSERT INTO passages (id, value, summary) VALUES (?, ?, ?) """, (last_id, value, summary))
+					cursor.execute(""" INSERT INTO passages (id, summary) VALUES (?, ?, ?) """, (last_id, summary))
 			elif 'summary' in entry:
 				# print("star")
 				value = entry['summary']
 				summary = re.sub('[^a-zA-Z0-9 \n\\.]', '', value)
 				summary = "summary"
 				# summary = summarize("summary")
-				cursor.execute(""" INSERT INTO passages (id, value, summary) VALUES (?, ?, ?) """, (last_id, value, summary))
+				cursor.execute(""" INSERT INTO passages (id, summary) VALUES (?, ?, ?) """, (last_id, summary))
 
 			logging.info("published to passages table successfully")
 
